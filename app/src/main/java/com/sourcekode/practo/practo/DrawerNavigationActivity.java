@@ -41,7 +41,7 @@ public class DrawerNavigationActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         listdoc = new ArrayList<>();
-        listdoc.add(new Doctor("Audiologist",R.drawable.ic_launcher_foreground));
+        listdoc.add(new Doctor("Audiologist",R.drawable.cardiologist));
         listdoc.add(new Doctor("Allergist",R.drawable.ic_launcher_foreground));
         listdoc.add(new Doctor("Anesthesiologist",R.drawable.ic_launcher_foreground));
         listdoc.add(new Doctor("Cardiologist",R.drawable.ic_launcher_foreground));

@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(5500);
+                    Thread.sleep(1000);
                     Intent i = new Intent(SplashActivity.this,DrawerNavigationActivity.class);
                     startActivity(i);
                     finish();
