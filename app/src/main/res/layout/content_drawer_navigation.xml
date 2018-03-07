@@ -8,13 +8,21 @@
     tools:context="com.sourcekode.practo.practo.DrawerNavigationActivity"
     tools:showIn="@layout/app_bar_drawer_navigation"
     android:padding="8dp"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:orientation="vertical">
 
 
     <android.support.v7.widget.RecyclerView
     android:id="@+id/recyclerview_id"
+        android:layout_margin="5dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
 
 </LinearLayout>
 

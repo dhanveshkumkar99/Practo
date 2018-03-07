@@ -1,6 +1,8 @@
 package com.sourcekode.practo.practo;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.GridLayoutManager;
@@ -27,6 +29,8 @@ public class DrawerNavigationActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer_navigation);
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -39,6 +43,13 @@ public class DrawerNavigationActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                return true;
+            }
+        });
 
         listdoc = new ArrayList<>();
         listdoc.add(new Doctor("Audiologist",R.drawable.audiologist));
@@ -70,7 +81,13 @@ public class DrawerNavigationActivity extends AppCompatActivity
         listdoc.add(new Doctor("Radiologist",R.drawable.radiologist));
         listdoc.add(new Doctor("Rheumatologist",R.drawable.rheumatologist));
         listdoc.add(new Doctor("Surgeon",R.drawable.surgeon));
-        listdoc.add(new Doctor("Urologist",R.drawable.urologist));
+        listdoc.add(new Doctor("Urologist",R.drawable.urologist
+
+
+
+
+
+        ));
 
 
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerview_id);
@@ -117,17 +134,20 @@ public class DrawerNavigationActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.fav1) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.fav2) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.fav3) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.fav4) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.fav5) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.share) {
+
+        }
+        else if (id == R.id.about_us) {
 
         }
 
